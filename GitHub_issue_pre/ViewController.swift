@@ -13,6 +13,22 @@ import Foundation
 
 
 class ViewController: UIViewController {
+  
+    
+    @IBOutlet weak var issues_number_textField: UITextField!
+    func issues_number_textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let currentString = textField.text, let _range = Range(range, in: currentString) {
+            let newString = currentString.replacingCharacters(in: _range, with: string)
+            return Int(newString) != nil
+        } else {
+            return false
+        }
+    }
+ 
+    
+    
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +36,8 @@ class ViewController: UIViewController {
         let issues_run = Issue_number()
         issues_run.issue()
         //issues_run.issues_List()
-        
-        
-        //play.issue()
-        //play.Encoder()
-        // Do any additional setup after loading the view.
+    
+       
     }
 }
 
@@ -41,8 +54,8 @@ let user = "rei-yoshi"
 let password = "rei07041998"
 var value_issue:Any = 0
 var query_number : Int = 0
-var issue_number = 1
-let httpHeaderRequests = ["Authorization" : "b6ff772c33cf01489563c06a3d051d340e881c77","Accept" : "application/vnd.github.v3.text+json"]
+var issue_number = 4836
+
 
 //クエリを指定
 let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issues/\(issue_number)"
@@ -51,7 +64,7 @@ let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issue
 let ookami_issues_List_url : String = "https://api.github.com/repos/ookamiinc/ios/issues"
 
 let ookami_issues_comments_url = "https://api.github.com/repos/ookamiinc/ios/issues/4862/comments"
-let password1 = "b6ff772c33cf01489563c06a3d051d340e881c77"
+let password1 = "efdf6bc5acaab024b8b97740b89a2e54b478d3d5"
 
 
 let credentialData = "\(user):\(password1)".data(using: String.Encoding.utf8)!
@@ -78,6 +91,7 @@ class Issue_number {
      //issuesのそれぞれのtitleを抽出して一覧表示しようと考えたが
      //({title="",body="",...},{title="",body="",..},{title="",body="",...}のような形式の
      //JSONデータのパースを実行できていないため一旦保留
+     //余裕があればやる
      
      
     
