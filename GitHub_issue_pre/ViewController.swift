@@ -13,22 +13,14 @@ import Foundation
 
 
 class ViewController: UIViewController {
-  
     
-   
-    @IBOutlet weak var issues_number_textField: UITextField!
-    
-    
- 
-    
-    
-    @IBAction func issues_move(_ sender: Any) {
-    }
-    
-   
+    @IBOutlet weak var IssueNumber_specification: UITextField!
+    @IBOutlet weak var searchIssue_Button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         let issues_run = Issue_number()
         issues_run.issue()
@@ -54,19 +46,19 @@ let user = "rei-yoshi"
 let password = "rei07041998"
 var value_issue:Any = 0
 var query_number : Int = 0
-var issue_number = 4836
+var issue_number = 4909
 
 
 //クエリを指定
 let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issues/\(issue_number)"
 
 
-let ookami_issues_List_url : String = "https://api.github.com/repos/ookamiinc/ios/issues"
+//let ookami_issues_List_url : String = "https://api.github.com/repos/ookamiinc/ios/issues"
 
-let ookami_issues_comments_url = "https://api.github.com/repos/ookamiinc/ios/issues/4862/comments"
-let password1 = "efdf6bc5acaab024b8b97740b89a2e54b478d3d5"
+//let ookami_issues_comments_url = "https://api.github.com/repos/ookamiinc/ios/issues/4862"
 
 
+let password1 = "93aed37553e3037ea220d3f1fbd34c2e75fb4fc1"
 let credentialData = "\(user):\(password1)".data(using: String.Encoding.utf8)!
 let base64Credentials = credentialData.base64EncodedString()
 let headers = [
@@ -74,11 +66,7 @@ let headers = [
     "Accept": "application/json",
     "Content-Type": "application/json",
 ]
-var parameters : Parameters? {
-    return [
-        "Accept": "application/vnd.github.v3+json",
-    ]
-}
+
 
 
 
@@ -148,7 +136,7 @@ class Issue_number {
     
     //特定のクエリを指定した時のパースを実装したもの
     func issue(){
-        Alamofire.request(ookami_issues_url, method: .get, parameters: parameters,encoding: URLEncoding(destination: .queryString), headers: headers) .responseJSON { response in
+        Alamofire.request(ookami_issues_url, method: .get, parameters: nil,encoding: URLEncoding(destination: .queryString), headers: headers) .responseJSON { response in
             
             
             
