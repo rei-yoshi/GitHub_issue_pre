@@ -21,9 +21,13 @@ class singleissue_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let issues_run = Issue_number()
+        issues_run.issue()
+        
+        
         let issues_label = UILabel()
         issues_label.text = ""
-            issues_label.sizeToFit()
+        issues_label.sizeToFit()
         issues_label.center = self.view.center
         self.view.addSubview(issues_label)
         
@@ -31,23 +35,12 @@ class singleissue_ViewController: UIViewController {
        
         
     }
-    
-    func run_issues(){
-        let issues_run = Issue_number()
-        issues_run.issue()
-    }
-   
-    
-    
-    
-    
-    
-    
-    
+
     
 }
 
-
+var temp = ViewController()
+var search_number = temp.textField_Number
 
 
 //配列型のパースを実施するためのプロトコルを定義
@@ -64,22 +57,18 @@ let password = "rei07041998"
 var value_issue:Any = 0
 var query_number : Int = 0
 
-let issuenum = ViewController()
-
 
 
 
 //クエリを指定
 //ViewControllerクラスから入力値をもらう(issuenum.issue_number)
-let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issues/\(issuenum.issue_number)"
+let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issues/\(String(describing: search_number))"
 
 
 //let ookami_issues_List_url : String = "https://api.github.com/repos/ookamiinc/ios/issues"
 
-//let ookami_issues_comments_url = "https://api.github.com/repos/ookamiinc/ios/issues/4862"
-
-
 let password1 = "7ebe192eee8f3bcf0204bbef169da832d4e1f9f2"
+
 let credentialData = "\(user):\(password1)".data(using: String.Encoding.utf8)!
 let base64Credentials = credentialData.base64EncodedString()
 let headers = [

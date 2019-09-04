@@ -9,12 +9,13 @@
 import UIKit
 
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var IssueNumber_specification: UITextField!
     @IBOutlet weak var searchIssue_Button: UIButton!
     
-    var issue_number:Int = 0
+   
     
     //textFieldの数値を保存用
     var textField_Number = ""
@@ -23,13 +24,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
     }
+    
     
     //issue_Searchを押した時のメソッド
     @IBAction func searchIssue_Button (_ sender : UIButton){
         textField_Number = IssueNumber_specification.text!
-        issue_number = Int(textField_Number)!
+        //let issue_number = Int(textField_Number)!
     }
+    
+   
+   
     
 }
 
