@@ -50,8 +50,8 @@ let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issue
 
 let ookami_issues_List_url : String = "https://api.github.com/repos/ookamiinc/ios/issues"
 
-let ookami_issues_comments_url = "https://api.github.com/repos/ookamiinc/ios/issues/4862/comments"
-let password1 = "b2614f7260406de3045822714e2d06e674c52777"
+
+let password1 = "39a64389375f2435f4ecc2c5eaf1be3136d8b709"
 
 
 let credentialData = "\(user):\(password1)".data(using: String.Encoding.utf8)!
