@@ -41,7 +41,7 @@ let user = "rei-yoshi"
 let password = "rei07041998"
 var value_issue:Any = 0
 var query_number : Int = 0
-var issue_number = 4080
+var issue_number = 4909
 let httpHeaderRequests = ["Authorization" : "b6ff772c33cf01489563c06a3d051d340e881c77","Accept" : "application/vnd.github.v3.text+json"]
 
 //クエリを指定
@@ -51,7 +51,7 @@ let ookami_issues_url:String = "https://api.github.com/repos/ookamiinc/ios/issue
 let ookami_issues_List_url : String = "https://api.github.com/repos/ookamiinc/ios/issues"
 
 let ookami_issues_comments_url = "https://api.github.com/repos/ookamiinc/ios/issues/4862/comments"
-let password1 = "ed1714ff82400abbf4e49f9c22da2ae054697e2a"
+let password1 = "b2614f7260406de3045822714e2d06e674c52777"
 
 
 let credentialData = "\(user):\(password1)".data(using: String.Encoding.utf8)!
