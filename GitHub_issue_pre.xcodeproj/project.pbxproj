@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1941C664231F4327003A4CEC /* issues_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1941C663231F4326003A4CEC /* issues_view.swift */; };
+		1941C666231F433F003A4CEC /* issues_view.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1941C665231F433F003A4CEC /* issues_view.storyboard */; };
 		19CA235E23176E09002CB87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA235D23176E09002CB87C /* AppDelegate.swift */; };
 		19CA236023176E09002CB87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA235F23176E09002CB87C /* ViewController.swift */; };
 		19CA236323176E09002CB87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA236123176E09002CB87C /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		049CE2B7575D60B4389C8C7A /* Pods-GitHub_issue_preTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_issue_preTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHub_issue_preTests/Pods-GitHub_issue_preTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1182511BDF2821BD96F0813F /* Pods_GitHub_issue_pre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_issue_pre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1941C663231F4326003A4CEC /* issues_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = issues_view.swift; sourceTree = "<group>"; };
+		1941C665231F433F003A4CEC /* issues_view.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = issues_view.storyboard; sourceTree = "<group>"; };
 		19CA235A23176E09002CB87C /* GitHub_issue_pre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub_issue_pre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CA235D23176E09002CB87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CA235F23176E09002CB87C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1941C662231F42D0003A4CEC /* issues_view */ = {
+			isa = PBXGroup;
+			children = (
+				1941C663231F4326003A4CEC /* issues_view.swift */,
+				1941C665231F433F003A4CEC /* issues_view.storyboard */,
+			);
+			path = issues_view;
+			sourceTree = "<group>";
+		};
 		19CA235123176E09002CB87C = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +127,7 @@
 		19CA235C23176E09002CB87C /* GitHub_issue_pre */ = {
 			isa = PBXGroup;
 			children = (
+				1941C662231F42D0003A4CEC /* issues_view */,
 				19CA235D23176E09002CB87C /* AppDelegate.swift */,
 				19CA235F23176E09002CB87C /* ViewController.swift */,
 				19CA236123176E09002CB87C /* Main.storyboard */,
@@ -162,7 +176,6 @@
 				34F7B22CFFF4ECF2454DA46C /* Pods-GitHub_issue_preUITests.debug.xcconfig */,
 				429CD23C560A30E2121B8547 /* Pods-GitHub_issue_preUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -277,6 +290,7 @@
 				19CA236823176E0A002CB87C /* LaunchScreen.storyboard in Resources */,
 				19CA236523176E0A002CB87C /* Assets.xcassets in Resources */,
 				19CA236323176E09002CB87C /* Main.storyboard in Resources */,
+				1941C666231F433F003A4CEC /* issues_view.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1941C664231F4327003A4CEC /* issues_view.swift in Sources */,
 				19CA236023176E09002CB87C /* ViewController.swift in Sources */,
 				19CA235E23176E09002CB87C /* AppDelegate.swift in Sources */,
 			);

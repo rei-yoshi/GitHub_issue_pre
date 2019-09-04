@@ -29,12 +29,16 @@
                                 <rect key="frame" x="150" y="435" width="135" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="issues_search"/>
+                                <connections>
+                                    <action selector="issues_move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKs-jw-cea"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="issues_number_textField" destination="SJn-0x-7Qe" id="fYd-WB-436"/>
                         <outlet property="issues_number_textFiels" destination="SJn-0x-7Qe" id="TIB-Pr-gZs"/>
                         <outlet property="issues_textField" destination="SJn-0x-7Qe" id="Oqj-m6-aOf"/>
                     </connections>

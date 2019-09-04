@@ -15,19 +15,16 @@ import Foundation
 class ViewController: UIViewController {
   
     
+   
     @IBOutlet weak var issues_number_textField: UITextField!
-    func issues_number_textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let currentString = textField.text, let _range = Range(range, in: currentString) {
-            let newString = currentString.replacingCharacters(in: _range, with: string)
-            return Int(newString) != nil
-        } else {
-            return false
-        }
-    }
+    
+    
  
     
     
-   
+    @IBAction func issues_move(_ sender: Any) {
+    }
+    
    
     
     override func viewDidLoad() {
@@ -40,6 +37,9 @@ class ViewController: UIViewController {
        
     }
 }
+
+
+
 
 //配列型のパースを実施するためのプロトコルを定義
 public protocol Decodable {
