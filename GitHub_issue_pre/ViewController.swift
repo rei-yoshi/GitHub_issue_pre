@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var IssueNumber_specification: UITextField!
+    @IBOutlet weak var IssueNumber_textField : UITextField!
     @IBOutlet weak var searchIssue_Button: UIButton!
     
     //textFieldの数値を保存用
@@ -19,18 +19,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
+    //セグエの処理
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
+        if segue.identifier == "toView2" {
+            let nextView = segue.destination as! singleissue_ViewController
+            
+            nextView.argString = IssueNumber_textField.text!
+        }
+    }
     //issue_Searchを押した時のメソッド
     @IBAction func searchIssue_Button (_ sender : UIButton){
-        
-        //singleissue.Swiftでも使用する
-        textField_Number = IssueNumber_specification.text!
-        
-        //let issue_number = Int(textField_Number)!
-        
-        //初期化
-        IssueNumber_specification.text = ""
-        
     }
 }
