@@ -8,26 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController : UIViewController {
     
-    @IBOutlet weak var IssueNumber_textField : UITextField!
-    @IBOutlet weak var searchIssue_Button: UIButton!
+    @IBOutlet weak var IssueNumber_textField : UITextField?
+    @IBOutlet weak var searchIssue_Button: UIButton?
     
-    //textFieldの数値を保存用
-    var textField_Number = ""
     
-    override func viewDidLoad() {
+    
+    
+    
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
     }
-    //セグエの処理
-    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
-        if segue.identifier == "toView2" {
-            let nextView = segue.destination as! singleissue_ViewController
-            
-            nextView.argString = IssueNumber_textField.text!
-        }
-    }
+    
+    
     //issue_Searchを押した時のメソッド
     @IBAction func searchIssue_Button (_ sender : UIButton){
     }
+    
+    
+    //セグエの処理
+    //textFieldの入力値をsingleViewController.Swiftの変数に値渡しを実行した
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let issues_number : Int?  = Int(IssueNumber_textField!.text!)
+        
+        if segue.identifier == "nextViewController" {
+            guard issues_number != nil else {return}
+            let nextViewController = segue.destination as! singleissue_ViewController
+            nextViewController.issues_number = issues_number
+            
+        }
+        
+    }
+
 }

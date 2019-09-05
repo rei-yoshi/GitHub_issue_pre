@@ -18,35 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-gH-Xej">
-                                <rect key="frame" x="309" y="97" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-gH-Xej">
+                                <rect key="frame" x="320" y="69" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="issues一覧"/>
                                 <connections>
-                                    <segue destination="3wV-T6-Wj7" kind="presentation" id="7x4-55-qQH"/>
+                                    <segue destination="3wV-T6-Wj7" kind="presentation" identifier="nextViewController" id="7x4-55-qQH"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-oX-OYM">
-                                <rect key="frame" x="62" y="377" width="308" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFE-nE-hy8">
                                 <rect key="frame" x="151" y="448" width="131" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="search_issue"/>
                                 <connections>
-                                    <segue destination="Pa8-q0-gVi" kind="presentation" id="ekv-ln-YFu"/>
+                                    <segue destination="Pa8-q0-gVi" kind="presentation" identifier="nextViewController" id="ekv-ln-YFu">
+                                        <segue key="commit" inheritsFrom="parent" id="qJS-M0-bbF"/>
+                                        <segue key="preview" inheritsFrom="commit" id="wUP-YN-bzb"/>
+                                    </segue>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-oX-OYM">
+                                <rect key="frame" x="94" y="384" width="227" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="IssueNumber_specification" destination="bQg-oX-OYM" id="c76-qS-GBV"/>
+                        <outlet property="IssueNumber_textField" destination="bQg-oX-OYM" id="lyz-YT-HVw"/>
                         <outlet property="searchIssue_Button" destination="BFE-nE-hy8" id="kjy-yx-okE"/>
                     </connections>
                 </viewController>
@@ -67,10 +70,13 @@
         <!--singleissue-->
         <scene sceneID="NTJ-lw-Y3Y">
             <objects>
-                <viewControllerPlaceholder storyboardName="singleissue" id="Pa8-q0-gVi" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="singleissue" referencedIdentifier="singleissue" id="Pa8-q0-gVi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwm-Ny-Oev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749" y="120"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ekv-ln-YFu"/>
+    </inferredMetricsTieBreakers>
 </document>

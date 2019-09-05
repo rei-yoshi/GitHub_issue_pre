@@ -1,16 +1,20 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (4.9.0)
+  - markymark (9.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - markymark
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - markymark
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  markymark: 0980e2aa96568eb1f4d1f2cdd523c9e6201264fb
 
-PODFILE CHECKSUM: e55a1c4ffb72607b22194bf58d3382c2e64e90dc
+PODFILE CHECKSUM: 6d47d7ca283610544a7e12a0236987849f91eb76
 
 COCOAPODS: 1.7.2

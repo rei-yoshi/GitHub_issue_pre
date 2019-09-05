@@ -14,20 +14,20 @@
         <scene sceneID="LMc-nC-64Y">
             <objects>
                 <viewController storyboardIdentifier="singleissue" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LdB-2N-o5D" customClass="singleissue_ViewController" customModule="GitHub_issue_pre" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IYn-oC-qHK">
+                    <view key="view" contentMode="left" id="IYn-oC-qHK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-x9-CuI">
-                                <rect key="frame" x="354" y="69" width="34" height="30"/>
+                                <rect key="frame" x="39" y="71" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="back"/>
                                 <connections>
                                     <segue destination="dq4-5e-WSV" kind="presentation" id="mGH-m4-h2K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-T8-GgT">
-                                <rect key="frame" x="0.0" y="107" width="414" height="222"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="38" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-X9-qCu">
+                                <rect key="frame" x="20" y="190" width="394" height="438"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -38,7 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="5Op-BW-Elo"/>
                     </view>
                     <connections>
-                        <outlet property="issue_title" destination="M2s-T8-GgT" id="j6Q-UX-XbO"/>
+                        <outlet property="issue_title" destination="ZsQ-X9-qCu" id="bvQ-62-UPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuC-v3-tfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
