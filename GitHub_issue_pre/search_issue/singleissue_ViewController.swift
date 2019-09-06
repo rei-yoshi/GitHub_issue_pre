@@ -9,21 +9,17 @@
 import UIKit
 import Alamofire
 import Foundation
-import markymark
+//import MarkdownView
 
 
 public class singleissue_ViewController: UIViewController {
-    
-    
-    
     //viewControllerから値をもらう時の引き取り変数
     var issues_number: Int?
-    
+    var body:String?
+    // var body_temp: String
     var issues_title : String?
     var issues_body : String?
     //var issues_number : String
-    
-    
     
     @IBOutlet weak var issue_title: UILabel!
     
@@ -34,6 +30,13 @@ public class singleissue_ViewController: UIViewController {
             return()
         }
         
+        /*
+        let mdView = MarkdownView()
+        mdView.frame = view.bounds
+        mdView.load(markdown:"\(String(describing: body))")
+        issue_title.text! = "\(view.addSubview(mdView))"
+ */
+        
         //nilではなかった時の処理
         //強制アンラップしているため後ほど変更を加える
         //issue_title.text = "\(String(describing: issues_title))"
@@ -43,6 +46,7 @@ public class singleissue_ViewController: UIViewController {
         
         
     }
+    
     //特定のクエリを指定した時のパースを実装したもの
     func issue() {
         
@@ -50,9 +54,9 @@ public class singleissue_ViewController: UIViewController {
         //アクセス方法に自身で設定したアクセストークンを設定したことで
         //ookami_organizationへのアクセス権限を得ることができた
         //ViewControllerクラスから入力値をもらう(issuenum.issue_number)->クエリの指定
-        
         let user = "rei-yoshi"
-        let password1 :String = "c9707bae2cf25dad65b84021b7dcce85d5f25a3f"
+        //let password = "rei07041998"
+        let password1 :String = "3a96a5dfe7a00b30ea90d7b43ca9d1d87aac02ee"
         let ookami_issues_url : String = "https://api.github.com/repos/ookamiinc/ios/issues/\(String(describing: issues_number!))"
         let credentialData = "\(user):\(password1)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString()
@@ -61,6 +65,8 @@ public class singleissue_ViewController: UIViewController {
             "Accept": "application/json",
             "Content-Type": "application/json",
         ]
+        
+        
         
        
         Alamofire.request(ookami_issues_url, method: .get, parameters: nil,encoding: URLEncoding(destination: .queryString), headers: headers) .responseJSON { response in
@@ -79,22 +85,15 @@ public class singleissue_ViewController: UIViewController {
             }
             let decorder = JSONDecoder()
             do{
-                let task : issues_JSON = try decorder.decode(issues_JSON.self,from : data)
+                 let task : issues_JSON = try
+                 decorder.decode(issues_JSON.self,from : data)
                 
                 
                 print(task.title)
                 print(task.body)
+                //
                 self.issue_title.text = "\(task.body)"
-                
-                //self.issues_title = task.title
-                let md = MarkDownTextView()
-                md.text = String(task.body)
-    
-                
-                
-                
-                
-                
+                self.body = task.body
                 
                 print("クエリ設定時parseは成功!!")
                 

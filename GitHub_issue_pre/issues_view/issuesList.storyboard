@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9h-sh-2Lh">
-                                <rect key="frame" x="345" y="99" width="34" height="30"/>
+                                <rect key="frame" x="36" y="67" width="34" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="back"/>
                                 <connections>
-                                    <segue destination="bIG-yz-loQ" kind="presentation" id="03S-6z-wFv"/>
+                                    <segue destination="mlo-zv-84u" kind="unwind" unwindAction="backWithSegue:" id="lBk-t3-2d1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,16 +33,9 @@
                     <navigationItem key="navigationItem" id="LHH-RV-LeL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ae9-J7-VLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mlo-zv-84u" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="48.883928571428569"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="WtK-0U-886">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="issues_List" storyboardName="Main" referencedIdentifier="Main" id="bIG-yz-loQ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwm-xO-cbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1684.057971014493" y="-222.32142857142856"/>
         </scene>
     </scenes>
 </document>

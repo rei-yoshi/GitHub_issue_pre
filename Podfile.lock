@@ -1,20 +1,20 @@
 PODS:
   - Alamofire (4.9.0)
-  - markymark (9.2.0)
+  - MarkdownView (1.6.0)
 
 DEPENDENCIES:
   - Alamofire
-  - markymark
+  - MarkdownView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - markymark
+    - MarkdownView
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  markymark: 0980e2aa96568eb1f4d1f2cdd523c9e6201264fb
+  MarkdownView: 25c1c2d7ff9706624a575556296e188be3dd3f6b
 
-PODFILE CHECKSUM: 6d47d7ca283610544a7e12a0236987849f91eb76
+PODFILE CHECKSUM: d01c4c2ce97413578a8485b6f73460ed5e4b5d2f
 
 COCOAPODS: 1.7.2

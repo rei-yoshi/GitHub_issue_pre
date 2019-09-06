@@ -39,6 +39,13 @@ public class ViewController : UIViewController {
             nextViewController.issues_number = issues_number
             
         }
+    }
+        
+        
+    
+    //backボタンの設置
+    //storyboard refarenseのbackボタンに
+    @IBAction func back(segue : UIStoryboardSegue){
         
     }
 
