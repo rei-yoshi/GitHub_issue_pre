@@ -18,26 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="38" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-X9-qCu">
-                                <rect key="frame" x="20" y="190" width="394" height="438"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-x9-CuI">
-                                <rect key="frame" x="43" y="70" width="34" height="30"/>
+                                <rect key="frame" x="20" y="44" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="back"/>
                                 <connections>
                                     <segue destination="jwD-O4-vsJ" kind="unwind" unwindAction="backWithSegue:" id="yPo-u4-0hV"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-fA-b6G">
+                                <rect key="frame" x="0.0" y="164" width="414" height="732"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nLs-cs-S3d" userLabel="body_text">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nLs-cs-S3d" firstAttribute="centerY" secondItem="TIy-fA-b6G" secondAttribute="centerY" id="7r0-4Y-cTN"/>
+                                    <constraint firstAttribute="trailing" secondItem="nLs-cs-S3d" secondAttribute="trailing" id="KBq-vQ-HEK"/>
+                                    <constraint firstAttribute="bottom" secondItem="nLs-cs-S3d" secondAttribute="bottom" id="WQD-cx-1pP"/>
+                                    <constraint firstItem="nLs-cs-S3d" firstAttribute="centerX" secondItem="TIy-fA-b6G" secondAttribute="centerX" id="d9h-A1-04K"/>
+                                    <constraint firstItem="nLs-cs-S3d" firstAttribute="top" secondItem="TIy-fA-b6G" secondAttribute="top" id="eCl-kZ-Bfc"/>
+                                    <constraint firstItem="nLs-cs-S3d" firstAttribute="leading" secondItem="TIy-fA-b6G" secondAttribute="leading" id="xbB-Be-Y7C"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="38" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-X9-qCu">
+                                <rect key="frame" x="0.0" y="74" width="414" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TIy-fA-b6G" firstAttribute="leading" secondItem="ZsQ-X9-qCu" secondAttribute="leading" id="9zm-R2-QTV"/>
+                            <constraint firstItem="TIy-fA-b6G" firstAttribute="trailing" secondItem="ZsQ-X9-qCu" secondAttribute="trailing" id="A7R-J6-7yu"/>
+                            <constraint firstAttribute="trailing" secondItem="TIy-fA-b6G" secondAttribute="trailing" id="MqZ-VP-W3P"/>
+                            <constraint firstItem="TIy-fA-b6G" firstAttribute="leading" secondItem="IYn-oC-qHK" secondAttribute="leading" id="QNS-Qz-f2e"/>
+                            <constraint firstItem="TIy-fA-b6G" firstAttribute="top" secondItem="IYn-oC-qHK" secondAttribute="top" constant="164" id="dRI-0U-iEx"/>
+                            <constraint firstAttribute="bottom" secondItem="TIy-fA-b6G" secondAttribute="bottom" id="nAU-4T-hER"/>
+                            <constraint firstItem="TIy-fA-b6G" firstAttribute="top" secondItem="ZsQ-X9-qCu" secondAttribute="bottom" id="oJA-0p-37N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Op-BW-Elo"/>
                     </view>
                     <connections>
+                        <outlet property="issue_body" destination="TIy-fA-b6G" id="Kwq-0p-iQC"/>
                         <outlet property="issue_title" destination="ZsQ-X9-qCu" id="bvQ-62-UPP"/>
                     </connections>
                 </viewController>
