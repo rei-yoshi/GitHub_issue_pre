@@ -5,6 +5,8 @@ target 'GitHub_issue_pre' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod "Alamofire"
+  pod "MarkdownView"
+
 
   # Pods for GitHub_issue_pre
 

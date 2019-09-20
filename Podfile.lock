@@ -1,16 +1,20 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (4.9.0)
+  - MarkdownView (1.6.0)
 
 DEPENDENCIES:
   - Alamofire
+  - MarkdownView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - MarkdownView
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  MarkdownView: 25c1c2d7ff9706624a575556296e188be3dd3f6b
 
-PODFILE CHECKSUM: e55a1c4ffb72607b22194bf58d3382c2e64e90dc
+PODFILE CHECKSUM: d01c4c2ce97413578a8485b6f73460ed5e4b5d2f
 
 COCOAPODS: 1.7.2
