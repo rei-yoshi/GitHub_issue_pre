@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let issues_run = Issue_number()
+        
+        
+        
         issues_run.issue()
         
         
