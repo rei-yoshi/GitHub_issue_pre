@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         //play.Encoder()
         // Do any additional setup after loading the view.
     }
+    
 }
 
 //GitHub上で作成したトークンを用いて認証を行った
