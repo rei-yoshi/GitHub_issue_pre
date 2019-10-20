@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     
 }
 
+
+
 //GitHub上で作成したトークンを用いて認証を行った
 //自分のアカウントへのアクセスURL:取得できているのでOK
 //let urlString :String = "https://api.github.com/repos/ookamiinc/ios/issues/ access_token=0ce6965a6ad1bdf7f547f51d6e66a85529f7a711"
@@ -57,11 +59,6 @@ class ViewController: UIViewController {
  getissue()
  }
  */
-
-
-
-
-
 
 /*
  class Issues{
@@ -164,6 +161,8 @@ var parameters : Parameters? {
     ]
 }
 
+
+
 //issueの最新のnumbeρを取得する
 class Issue_number {
     
@@ -216,20 +215,11 @@ class Issue_number {
             catch{
                 print(error)
             }
-            
-            
-            
-            
         }
     }
     
     
 }
-
-
-
-
-
 
 
 //2019/09/02
