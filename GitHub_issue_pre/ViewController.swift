@@ -163,6 +163,9 @@ var parameters : Parameters? {
 
 
 
+
+
+
 //issueの最新のnumbeρを取得する
 class Issue_number {
     
@@ -220,6 +223,14 @@ class Issue_number {
     
     
 }
+
+
+
+
+
+
+
+
 
 
 //2019/09/02
