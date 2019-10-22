@@ -193,6 +193,7 @@ class Issue_number {
             //パースすることに成功
             //numberの取得
             
+            
             struct issues_JSON : Codable {
                 var title : String
                 var body: String
